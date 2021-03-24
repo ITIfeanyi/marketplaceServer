@@ -1,0 +1,57 @@
+h2 {
+  text-align: center;
+  color: blue;
+}
+form {
+  display: flex;
+  flex-flow: column;
+  /* width: 100%; */
+  margin: 1rem auto;
+  background-color: rgb(252, 252, 252);
+  border: 1px solid #eee;
+}
+@media (min-width: 500px) {
+  form {
+    width: 70%;
+  }
+}
+@media (min-width: 800px) {
+  form {
+    width: 55%;
+  }
+}
+@media (min-width: 1000px) {
+  form {
+    width: 40%;
+  }
+}
+@media (min-width: 1100px) {
+  form {
+    width: 35%;
+  }
+}
+.inputContainer {
+  display: flex;
+  flex-flow: column;
+  margin: 0.4rem;
+  padding: 0.3rem;
+  color: blue;
+}
+.inputContainer input {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  outline: none;
+}
+.inputContainer label {
+  font-weight: 600;
+}
+
+.submitBtn {
+  width: 50%;
+  margin: 1rem auto;
+}
+.submitBtn button {
+  width: 100%;
+  padding: 0.5rem;
+}
