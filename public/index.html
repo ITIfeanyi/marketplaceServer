@@ -11,6 +11,7 @@
     </header>
 
     <form>
+      <p class="product_success"></p>
       <div class="inputContainer">
         <label for="title">Title</label>
         <input type="text" placeholder="Product title" name="title" required />
@@ -46,14 +47,15 @@
       </div>
     </form>
     <script>
+      const product_success = document.querySelector(".product_success");
       const form = document.querySelector("form");
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        const title = form.title.value;
-        const price = form.price.value;
-        const category = form.category.value;
-        const imageURL = form.imageURL.value;
-        const description = form.description.value;
+        let title = form.title.value;
+        let price = form.price.value;
+        let category = form.category.value;
+        let imageURL = form.imageURL.value;
+        let description = form.description.value;
 
         try {
           const res = await fetch("http://localhost:4000", {
@@ -67,6 +69,13 @@
               description,
             }),
           });
+          const data = await res.json();
+
+          if (data) {
+            document.querySelector("form").reset();
+            product_success.innerHTML = "";
+          }
+          product_success.innerHTML = data.message;
         } catch (error) {
           console.log(error);
         }

@@ -5,10 +5,17 @@ h2 {
 form {
   display: flex;
   flex-flow: column;
-  /* width: 100%; */
   margin: 1rem auto;
   background-color: rgb(252, 252, 252);
   border: 1px solid #eee;
+}
+.product_success {
+  color: rgb(105, 146, 45);
+  text-align: center;
+  background-color: white;
+  margin: 0;
+  width: 100%;
+  height: 1.4rem;
 }
 @media (min-width: 500px) {
   form {
@@ -39,9 +46,10 @@ form {
 }
 .inputContainer input {
   width: 100%;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.3rem;
   border-radius: 5px;
   outline: none;
+  font-size: 0.8rem;
 }
 .inputContainer label {
   font-weight: 600;
