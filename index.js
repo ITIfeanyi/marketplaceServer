@@ -10,7 +10,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //routes
 const homepageRoute = require("./Routes/index");
+const productRoute = require("./Routes/productRoutes");
 
 app.use("/", homepageRoute);
+app.use("/", productRoute);
 
 app.listen(PORT, () => console.log(`Application running on port ${PORT}`));
